@@ -29,7 +29,7 @@ class Parser:
                 case "/":
                     left = ast_nodes.Divide(left, right)
                 case _:
-                    raise SyntaxError("Expected '(' in term")
+                    raise SyntaxError("Unexpected operator in term")
 
         return left
 
@@ -49,7 +49,7 @@ class Parser:
                 case "-":
                     left = ast_nodes.Subtract(left, right)
                 case _:
-                    raise SyntaxError("Invalid token in expression")
+                    raise SyntaxError("Unexpected operator in expr")
 
         return left
     
@@ -58,12 +58,12 @@ class Parser:
             return ast_nodes.Number(int(self._consume()))
         
         if self._consume() != "(":
-            raise SyntaxError("Expected '(' in term")
+            raise SyntaxError("Expected '(' in factor")
 
         expr = self._build_expr()
 
         if self._consume() != ")":
-            raise SyntaxError("Expected ')' in term")
+            raise SyntaxError("Expected ')' in factor")
 
         return expr
 
