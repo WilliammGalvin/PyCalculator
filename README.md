@@ -1,5 +1,5 @@
 # PyCalculator
-Simple calculator with order precedence and nested sub expressions in Python.
+Simple calculator with order precedence and nested sub expressions in Python. Read the Medium article associated [here](https://medium.com/@williammgalvin/exploring-the-foundation-of-language-processing-be2d4bc577c1).
 
 ## Features
 - Addition and subtraction
