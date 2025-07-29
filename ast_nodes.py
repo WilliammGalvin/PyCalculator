@@ -12,7 +12,7 @@ class Number(ASTNode):
 
     # Returns the numeric value directly.
     def evaluate(self) -> int:
-        return self.value
+        pass
 
     # Returns a formatted string of the number node.
     def __repr__(self) -> str:
@@ -27,7 +27,7 @@ class Add(ASTNode):
 
     # Recursively evaluates the left and right sides and adds the results.
     def evaluate(self) -> int:
-        return self.left.evaluate() + self.right.evaluate()
+        pass
 
     # Returns a formatted string of the addition node and its children.
     def __repr__(self) -> str:
@@ -42,7 +42,7 @@ class Subtract(ASTNode):
 
     # Evaluates the subtraction of right from left.
     def evaluate(self) -> int:
-        return self.left.evaluate() - self.right.evaluate()
+        pass
 
     # Returns a formatted string of the subtraction node and its children.
     def __repr__(self) -> str:
@@ -57,7 +57,7 @@ class Multiply(ASTNode):
 
     # Returns the product of the left and right evaluations.
     def evaluate(self) -> int:
-        return self.left.evaluate() * self.right.evaluate()
+        pass
 
     # Returns a formatted string of the multiplication node.
     def __repr__(self) -> str:
@@ -72,7 +72,7 @@ class Divide(ASTNode):
 
     # Performs floating-point division of the evaluated left and right nodes.
     def evaluate(self) -> int:
-        return self.left.evaluate() / self.right.evaluate()
+        pass
     
     # Returns a formatted string of the division node.
     def __repr__(self) -> str:
